@@ -10,3 +10,10 @@ __pycache__/
 *.pyc
 .idea/
 .vscode/
+venv/
+.venv/
+env/
+*/Scripts/
+*/Lib/
+*/Include/
+pyvenv.cfg
