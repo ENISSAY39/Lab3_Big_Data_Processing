@@ -1,3 +1,5 @@
+import time
+print(f"[BAD] Parsing q1_diamond at {time.strftime('%H:%M:%S')}")
 from __future__ import annotations
 
 from datetime import datetime
