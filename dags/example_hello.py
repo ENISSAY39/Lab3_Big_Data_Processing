@@ -26,6 +26,7 @@ Try it
 5. Watch the Grid view fill in green.
 6. Click on a task square to see its logs.
 """
+
 from __future__ import annotations
 
 from datetime import datetime
@@ -36,13 +37,13 @@ from airflow.decorators import dag, task
 @dag(
     dag_id="example_hello",
     start_date=datetime(2026, 5, 1),
-    schedule=None,            # manual trigger only
+    schedule=None,  # manual trigger only
     catchup=False,
     tags=["lab3", "example"],
 )
 def example_hello():
 
-    @task
+    @task(pool="lab_pool")
     def say_hello() -> str:
         msg = "Hello, EPF!"
         print(msg)
